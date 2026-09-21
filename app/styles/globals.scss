@@ -399,3 +399,31 @@ pre {
 .copyable {
   user-select: text;
 }
+/* ========================================== */
+/* ======== 隐藏 AI 与 API 相关界面 ======== */
+/* ========================================== */
+
+/* 1. 隐藏顶部导航栏的模型选择器和副标题 */
+.window-header .window-header-sub-title,
+.chat-title-sub {
+  display: none !important;
+  }
+
+  /* 2. 隐藏聊天界面的 API Key 提示和错误气泡 */
+  .api-key-prompt,
+  .chat-message-error,
+  .chat-message-container:has(> .chat-message-error) {
+    display: none !important;
+    }
+
+    /* 3. 隐藏输入框上方的功能按钮（面具、预设等） */
+    .chat-input-actions {
+      display: none !important;
+      }
+
+      /* 4. 隐藏左侧边栏底部的“设置”按钮 */
+      .sidebar-action[aria-label="Settings"],
+      .sidebar-action[title="Settings"],
+      .sidebar-action:last-child {
+        display: none !important;
+        }
